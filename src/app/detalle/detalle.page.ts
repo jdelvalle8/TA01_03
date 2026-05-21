@@ -10,24 +10,22 @@ import { Elemento } from '../models/elemento.model';
   selector: 'app-detalle',
   templateUrl: 'detalle.page.html',
   styleUrls: ['detalle.page.scss'],
+  //Añadir los componentes Ionic utilizados en el HTML
   imports: [
-    IonHeader, IonToolbar, IonTitle, IonContent,
-    IonButtons, IonBackButton, IonList, IonItem, IonLabel
+    IonHeader, IonToolbar, IonTitle, IonContent
   ],
 })
 export class DetallePage implements OnInit {
 
-  // TODO (Apartado 3 – Interpolación): Usar {{ elementoDetalle.nombre }} en el HTML
-  elementoDetalle: Elemento | null = null;
+  // TODO (Apartado 3 – Interpolación)
+  //elementoDetalle será del tipo Elemento o null
+  elementoDetalle = null;
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {
     // Recuperar el elemento pasado desde la página anterior mediante el estado de navegación
     // Pista: history.state
-    const state = history.state;
-    if (state?.elementoHome) {
-      this.elementoDetalle = state.elementoHome;
-    }
+
   }
 }

@@ -1,5 +1,5 @@
 <!--
-  TAREA TA01 – DetallePage
+  TAREA TA03 – DetallePage
   Implementa los TODOs siguiendo los apartados indicados en la teoría.
 -->
 
@@ -12,15 +12,14 @@
           - Usa el atributo defaultHref="/home" para asegurar que el botón funcione incluso si se accede directamente a esta página.
           Estructura de referencia (teoría, apartado 2 – ion-back-button)
     -->
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
-    </ion-buttons>
+
 
      <!-- TODO (Apartado 3 – Interpolación):
-         Mostrar el nombre del elemento en el título usando {{ elementoDetalle?.nombre }}
+         Mostrar el nombre del elemento en el título usando
+         Recordad que si el elemento puede ser null habrá que controlarlo con ?
          En vez de <ion-title>Detalle</ion-title>
     -->
-    <ion-title>{{ elementoDetalle?.nombre }}</ion-title>
+    <ion-title>Detalle</ion-title>
 
   </ion-toolbar>
 </ion-header>
@@ -34,8 +33,8 @@
        <ion-list>
          <ion-item>
            <ion-label>
-             <h2>{{ elementoDetalle.nombre }}</h2>
-             <p>{{ elementoDetalle.descripcion }}</p>
+             <h2></h2>
+             <p></p>
            </ion-label>
          </ion-item>
          <ion-item>
@@ -45,22 +44,6 @@
 
        Si no hay elemento seleccionado, muestra un mensaje informativo.
   -->
-  @if (elementoDetalle) {
-    <ion-list>
-      <ion-item>
-        <ion-label>
-          <h2>{{ elementoDetalle.nombre }}</h2>
-          <p>{{ elementoDetalle.descripcion }}</p>
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Categoría: {{ elementoDetalle.categoria }}</ion-label>
-      </ion-item>
-    </ion-list>
-  } @else {
-    <ion-item>
-      <ion-label>No se ha seleccionado ningún elemento.</ion-label>
-    </ion-item>
-  }
+
 
 </ion-content>
